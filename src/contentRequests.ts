@@ -1,12 +1,8 @@
-const requestSender = new XMLHttpRequest();
-
-requestSender.onreadystatechange = apiHandler;
-
-function apiHandler(res) {
-  if (requestSender.readyState === 4 && requestSender.status === 200) {
-    console.log(JSON.parse(res.target.response));
-  }
-}
-
-requestSender.open("GET", "https://api.github.com/users/adnan-sheikh", true);
-requestSender.send();
+fetch("https://api.github.com/users/adnan-sheikh")
+  .then((res) => {
+    if (res.status === 200) {
+      return res.json();
+    }
+  })
+  .then((jsonRes) => console.log(jsonRes))
+  .catch((err) => console.error(err));
