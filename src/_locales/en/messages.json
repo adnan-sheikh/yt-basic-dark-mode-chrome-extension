@@ -1,0 +1,14 @@
+{
+  "appName": {
+    "message": "YoutTube dark mode"
+  },
+  "appDescription": {
+    "message": "This extension toggles YouTube background between black and white."
+  },
+  "darkMessage": {
+    "message": "Make it dark!"
+  },
+  "lightMessage": {
+    "message": "Make it light!"
+  }
+}
